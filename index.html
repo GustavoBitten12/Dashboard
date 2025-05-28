@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            grid-column: 1 / -1;
+            margin: 0 0 20px 0;
+            font-size: 24px;
+        }
+        
+        h2 {
+            font-size: 18px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .alertas {
+            grid-column: span 1;
+        }
+        
+        .relatorio {
+            grid-column: span 2;
+        }
+        
+        .horarios {
+            grid-column: span 1;
+        }
+        
+        .monitoramento {
+            grid-column: span 1;
+        }
+        
+        .big-number {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .label {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 15px 0;
+        }
+        
+        .progress-container {
+            margin: 15px 0;
+        }
+        
+        .progress-label {
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 5px;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background-color: #eee;
+            border-radius: 3px;
+            margin-bottom: 15px;
+        }
+        
+        .progress-80 {
+            width: 80%;
+            height: 100%;
+            background-color: #4CAF50;
+            border-radius: 3px;
+        }
+        
+        .progress-60 {
+            width: 60%;
+            height: 100%;
+            background-color: #4CAF50;
+            border-radius: 3px;
+        }
+        
+        .progress-40 {
+            width: 40%;
+            height: 100%;
+            background-color: #4CAF50;
+            border-radius: 3px;
+        }
+        
+        .progress-30 {
+            width: 30%;
+            height: 100%;
+            background-color: #4CAF50;
+            border-radius: 3px;
+        }
+        
+        .progress-0 {
+            width: 0%;
+            height: 100%;
+            background-color: #4CAF50;
+            border-radius: 3px;
+        }
+        
+        .progress-50 {
+            width: 50%;
+            height: 100%;
+            background-color: #4CAF50;
+            border-radius: 3px;
+        }
+        
+        .route {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Dashboard</h1>
+        
+        <div class="card alertas">
+            <h2>Alertas</h2>
+            <div class="big-number">14</div>
+            <div class="label">Concluídas</div>
+            
+            <div class="big-number">20</div>
+            <div class="label">Alertas</div>
+            
+            <div class="big-number">41</div>
+            <div class="label">Graves</div>
+            
+            <hr>
+        </div>
+        
+        <div class="card relatorio">
+            <h2>Relatório</h2>
+            <div class="big-number">24</div>
+            <div class="label">Concluídas</div>
+            
+            <div class="progress-container">
+                <div class="progress-label">80%</div>
+                <div class="progress-bar"><div class="progress-80"></div></div>
+                
+                <div class="progress-label">60%</div>
+                <div class="progress-bar"><div class="progress-60"></div></div>
+                
+                <div class="progress-label">40%</div>
+                <div class="progress-bar"><div class="progress-40"></div></div>
+                
+                <div class="progress-label">30%</div>
+                <div class="progress-bar"><div class="progress-30"></div></div>
+                
+                <div class="progress-label">0%</div>
+                <div class="progress-bar"><div class="progress-0"></div></div>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-label">50%</div>
+                <div class="progress-bar"><div class="progress-50"></div></div>
+                
+                <div class="progress-label">60%</div>
+                <div class="progress-bar"><div class="progress-60"></div></div>
+                
+                <div class="progress-label">40%</div>
+                <div class="progress-bar"><div class="progress-40"></div></div>
+                
+                <div class="progress-label">30%</div>
+                <div class="progress-bar"><div class="progress-30"></div></div>
+                
+                <div class="progress-label">0%</div>
+                <div class="progress-bar"><div class="progress-0"></div></div>
+            </div>
+            
+            <hr>
+        </div>
+        
+        <div class="card horarios">
+            <h2>Horários</h2>
+            <div class="label">Mais Movimentadas</div>
+            
+            <div class="route">Tupy / Norte via Centro</div>
+            
+            <div class="route">Norte / Centro</div>
+            
+            <hr>
+        </div>
+        
+        <div class="card monitoramento">
+            <h2>Monitoramento</h2>
+            <div class="big-number">30</div>
+            <div class="label">Trens</div>
+            
+            <div class="big-number">57</div>
+            <div class="label">Estações</div>
+            
+            <div class="big-number">34</div>
+            <div class="label">Estações</div>
+        </div>
+    </div>
+</body>
+</html>
