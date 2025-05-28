@@ -7,54 +7,39 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            background-color: #000000; /* Fundo preto */
             margin: 0;
             padding: 20px;
-            color: #333;
+            color: #ffffff; /* Texto branco para contraste */
         }
         
         .dashboard {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            max-width: 1200px;
+            max-width: 400px;
             margin: 0 auto;
         }
         
         .card {
-            background-color: white;
+            background-color: #1a1a1a; /* Card mais escuro que o fundo */
             border-radius: 8px;
             padding: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 190, 255, 0.2); /* Sombra azul */
+            margin-bottom: 20px;
+            border: 1px solid #333;
         }
         
         h1 {
-            grid-column: 1 / -1;
             margin: 0 0 20px 0;
             font-size: 24px;
+            text-align: center;
+            color: #0ebeff; /* Azul para Dashboard */
+            text-shadow: 0 0 5px rgba(14, 190, 255, 0.5);
         }
         
         h2 {
             font-size: 18px;
             margin-top: 0;
             margin-bottom: 15px;
-            color: #555;
-        }
-        
-        .alertas {
-            grid-column: span 1;
-        }
-        
-        .relatorio {
-            grid-column: span 2;
-        }
-        
-        .horarios {
-            grid-column: span 1;
-        }
-        
-        .monitoramento {
-            grid-column: span 1;
+            color: #0ebeff; /* Azul para os títulos */
         }
         
         .big-number {
@@ -65,13 +50,17 @@
         
         .label {
             font-size: 14px;
-            color: #777;
+            color: #aaaaaa; /* Cinza claro para texto secundário */
             margin-bottom: 15px;
+        }
+        
+        .alertas .label:nth-child(3) {
+            color: #0ebeff; /* Azul para "Concluídas" */
         }
         
         hr {
             border: none;
-            border-top: 1px solid #eee;
+            border-top: 1px solid #333; /* Linha divisória mais escura */
             margin: 15px 0;
         }
         
@@ -81,62 +70,85 @@
         
         .progress-label {
             font-size: 12px;
-            color: #777;
+            color: #aaaaaa;
             margin-bottom: 5px;
         }
         
         .progress-bar {
             height: 6px;
-            background-color: #eee;
+            background-color: #333; /* Fundo da barra de progresso */
             border-radius: 3px;
             margin-bottom: 15px;
         }
         
+        /* Cores das barras de progresso */
         .progress-80 {
             width: 80%;
             height: 100%;
-            background-color: #4CAF50;
+            background-color: #0ebeff; /* Azul */
             border-radius: 3px;
         }
         
         .progress-60 {
             width: 60%;
             height: 100%;
-            background-color: #4CAF50;
+            background-color: #0ebeff; /* Azul */
             border-radius: 3px;
         }
         
         .progress-40 {
             width: 40%;
             height: 100%;
-            background-color: #4CAF50;
+            background-color: #0ebeff; /* Azul */
             border-radius: 3px;
         }
         
         .progress-30 {
             width: 30%;
             height: 100%;
-            background-color: #4CAF50;
+            background-color: #0ebeff; /* Azul */
             border-radius: 3px;
         }
         
         .progress-0 {
             width: 0%;
             height: 100%;
-            background-color: #4CAF50;
+            background-color: #0ebeff; /* Azul */
             border-radius: 3px;
         }
         
         .progress-50 {
             width: 50%;
             height: 100%;
-            background-color: #4CAF50;
+            background-color: #0ebeff; /* Azul */
             border-radius: 3px;
         }
         
         .route {
             font-weight: bold;
             margin: 10px 0;
+            color: #ffffff;
+        }
+
+        /* Cores específicas para números */
+        .alertas .big-number:nth-child(2) {
+            color: #0ebeff; /* Azul para concluídas */
+        }
+        
+        .alertas .big-number:nth-child(4) {
+            color: #ffcc00; /* Amarelo para alertas */
+        }
+        
+        .alertas .big-number:nth-child(6) {
+            color: #ff3333; /* Vermelho para graves */
+        }
+        
+        .relatorio .big-number {
+            color: #0ebeff; /* Azul para os números do relatório */
+        }
+        
+        .monitoramento .big-number {
+            color: #0ebeff; /* Azul para monitoramento */
         }
     </style>
 </head>
